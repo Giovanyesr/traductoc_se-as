@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Principal - Tu Voz Junín</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <h1>Tu Voz Junín</h1>
+    <input type="search" placeholder="Buscar..." class="buscador" aria-label="Buscar contenido">
+  </header>
+
+  <main class="contenido-principal">
+    <!-- Panel izquierdo -->
+    <section class="panel-izquierdo">
+      <p><strong>Fecha y hora actual:</strong></p>
+      <p id="fecha"></p>
+      <p id="hora"></p>
+
+      <div class="imagen-usuario">
+        <img src="img/YO.png" alt="Foto del usuario, Giovany Sanchez Ramos" />
+      </div>
+
+      <p><strong>Sanchez Ramos</strong></p>
+      <p>Giovany Elver</p>
+      <p>DNI: 75185427</p>
+
+      <button class="boton-cerrar-sesion" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </section>
+
+    <!-- Panel derecho -->
+    <section class="panel-derecho">
+      <p><strong>Selecciona la discapacidad que presenta:</strong></p>
+      <select aria-label="Seleccionar discapacidad">
+        <option value="Transtorno de lenguaje">Trastornos de lenguaje</option>
+        <option value="discapacidad-cognitiva">Discapacidad cognitiva</option>
+        <option value="trastornos-motoras">Trastornos motores</option>
+      </select>
+
+      <div class="imagen-clinica">
+        <img src="img/logo1.png" alt="Logo de la clínica Tu Voz Junín" />
+      </div>
+
+      <button class="boton-continuar" onclick="continuar()">Continuar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - PROYECTO UNIVERSIDAD CONTINENTAL</p>
+  </footer>
+
+  <script>
+    // Mostrar la fecha y hora actual
+    const fecha = new Date();
+    const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('fecha').textContent = fecha.toLocaleDateString('es-PE', opcionesFecha);
+
+    function actualizarHora() {
+      const ahora = new Date();
+      const horaFormateada = ahora.toLocaleTimeString('es-PE');
+      document.getElementById('hora').textContent = horaFormateada;
+    }
+
+    setInterval(actualizarHora, 1000); // Actualiza la hora cada segundo
+    actualizarHora();
+
+    function cerrarSesion() {
+      window.location.href = '../login_registro/login.html'; // Redirige al login
+    }
+
+    function continuar() {
+      window.location.href = '../servicios/servicios.html'; // Redirige a la página de servicios
+    }
+  </script>
+
+</body>
+
+</html>

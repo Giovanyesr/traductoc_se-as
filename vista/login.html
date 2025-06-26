@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema web inclusivo para mejorar la comunicación de personas con discapacidad cognitiva utilizando machine learning.">
+  <meta name="author" content="Proyecto Universidad Continental">
+  <title>Login / Registro - Panadería Delicia</title>
+  <link rel="stylesheet" href="estilos-login.css">
+  <!-- Íconos FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Encabezado principal -->
+  <header class="titulo-principal">
+    <h1>SOMOS SALUD TU VOZ JUNÍN</h1>
+    <p>Plataforma inclusiva basada en machine learning para mejorar la comunicación de personas con discapacidad cognitiva.</p>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="contenedor-principal">
+
+    <!-- Logo de la empresa -->
+    <div class="logo-contenedor">
+      <img src="img/logo.png" alt="Logo" class="logo-empresa">
+    </div>
+
+    <!-- Formulario de Login -->
+    <section class="formulario" id="formLogin">
+      <h2>Iniciar Sesión</h2>
+      <form action="login.php" method="POST" aria-labelledby="formLogin">
+        
+        <div class="input-contenedor">
+          <label for="email" class="sr-only">Correo Electrónico</label>
+          <i class="fas fa-envelope"></i>
+          <input id="email" type="email" placeholder="Correo Electrónico" name="email" required aria-required="true">
+        </div>
+
+        <div class="input-contenedor">
+          <label for="password" class="sr-only">Contraseña</label>
+          <i class="fas fa-lock"></i>
+          <input id="password" type="password" placeholder="Contraseña" name="password" required aria-required="true">
+        </div>
+
+        <button type="submit" class="boton">Acceder</button>
+
+        <p class="texto-legal">Al iniciar sesión, aceptas nuestras <a href="#">Condiciones de uso</a> y <a href="#">Política de privacidad</a>.</p>
+
+        <p class="cambio-formulario">¿No tienes una cuenta? <a href="#" onclick="mostrarRegistro()">Regístrate</a></p>
+      </form>
+    </section>
+
+    <!-- Formulario de Registro -->
+    <section class="formulario oculto" id="formRegistro">
+      <h2>Regístrate</h2>
+      <form action="registro.php" method="POST">
+
+        <div class="input-contenedor">
+          <label for="nombre" class="sr-only">Nombre Completo</label>
+          <i class="fas fa-user"></i>
+          <input id="nombre" type="text" placeholder="Nombre Completo" name="nombre" required aria-required="true">
+        </div>
+
+        <div class="input-contenedor">
+          <label for="email-registro" class="sr-only">Correo Electrónico</label>
+          <i class="fas fa-envelope"></i>
+          <input id="email-registro" type="email" placeholder="Correo Electrónico" name="email" required aria-required="true">
+        </div>
+
+        <div class="input-contenedor">
+          <label for="password-registro" class="sr-only">Contraseña</label>
+          <i class="fas fa-lock"></i>
+          <input id="password-registro" type="password" placeholder="Contraseña" name="password" required aria-required="true">
+        </div>
+
+        <div class="input-contenedor">
+          <label for="telefono" class="sr-only">Número de Celular</label>
+          <i class="fas fa-phone"></i>
+          <input id="telefono" type="tel" placeholder="Número de Celular" name="telefono" required aria-required="true">
+        </div>
+
+        <div class="input-contenedor">
+          <label for="direccion" class="sr-only">Dirección</label>
+          <i class="fas fa-home"></i>
+          <input id="direccion" type="text" placeholder="Dirección" name="direccion" required aria-required="true">
+        </div>
+
+        <div class="input-contenedor">
+          <label for="distrito" class="sr-only">Distrito</label>
+          <i class="fas fa-map-marker-alt"></i>
+          <input id="distrito" type="text" placeholder="Distrito" name="distrito" required aria-required="true">
+        </div>
+
+        <div class="input-contenedor">
+          <label for="provincia" class="sr-only">Provincia</label>
+          <i class="fas fa-map"></i>
+          <input id="provincia" type="text" placeholder="Provincia" name="provincia" required aria-required="true">
+        </div>
+
+        <div class="input-contenedor">
+          <label for="departamento" class="sr-only">Departamento</label>
+          <i class="fas fa-globe-americas"></i>
+          <input id="departamento" type="text" placeholder="Departamento" name="departamento" required aria-required="true">
+        </div>
+
+        <button type="submit" class="boton">Crear Cuenta</button>
+
+        <p class="texto-legal">Al registrarte, aceptas nuestras <a href="#">Condiciones de uso</a> y <a href="#">Política de privacidad</a>.</p>
+
+        <p class="cambio-formulario">¿Ya tienes cuenta? <a href="#" onclick="mostrarLogin()">Iniciar Sesión</a></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 - Proyecto Universidad Continental. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script-login.js" defer></script>
+</body>
+</html>

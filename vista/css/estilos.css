@@ -1,0 +1,124 @@
+/* Estilo base para el cuerpo */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Encabezado con logo y buscador */
+header.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #009688;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.buscador {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.buscador:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+/* Contenedor principal de los paneles */
+.contenido-principal {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Estilos para el panel izquierdo */
+.panel-izquierdo, .panel-derecho {
+  flex: 1;
+  min-width: 280px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Panel izquierdo con borde derecho */
+.panel-izquierdo {
+  border-right: 2px solid #ddd;
+}
+
+/* Imagen del usuario */
+.imagen-usuario img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 1rem 0;
+  object-fit: cover;
+}
+
+
+/* Imagen clínica con tamaño ajustado */
+/* Imagen clínica con tamaño ajustado */
+.imagen-clinica img {
+  width: 100px;  /* Tamaño ajustado */
+  height: auto;
+  max-width: 100%;  /* Limita el tamaño de la imagen al 100% de su contenedor */
+  border-radius: 8px;
+  margin: 1rem 0;
+  object-fit: cover;  /* Asegura que la imagen no se distorsione */
+}
+
+
+
+/* Botones */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 1rem;
+  background-color: #009688;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #00796b;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #009688;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .contenido-principal {
+    flex-direction: column;
+  }
+
+  .panel-izquierdo, .panel-derecho {
+    min-width: 100%;
+  }
+
+  .buscador {
+    width: 100%;
+  }
+}

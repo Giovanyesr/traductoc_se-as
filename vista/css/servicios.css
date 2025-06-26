@@ -1,0 +1,143 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #009688;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  
+  /* Contenedor principal */
+  .contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  /* Panel izquierdo: imagen y cámara */
+  .panel-izquierdo {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imagen-persona img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .camara-opciones {
+    text-align: center;
+  }
+  
+  .camara-opciones h2 {
+    margin-bottom: 10px;
+    color: #004b87;
+  }
+  
+  .camara-opciones button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .camara-opciones button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Panel derecho: opciones de servicios */
+  .panel-derecho {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .opciones-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icono-servicio {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .servicio button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .servicio button:hover {
+    background-color: #218838;
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .contenido {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .panel-izquierdo, .panel-derecho {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
